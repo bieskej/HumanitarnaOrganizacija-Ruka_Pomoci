@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-06-16T00:00:00.000Z" agent="Cursor" version="24.0.0">
+  <diagram name="Dijagram komponenti" id="dijagram-komponenti">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- KORISNICI I PROFILI -->
+        <mxCell id="pkg_korisnici" value="KORISNICI I PROFILI" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="480" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="c_prijava" value="&lt;&lt;component&gt;&gt;&lt;br&gt;Prijava / Registracija" style="shape=component;align=left;spacingLeft=36;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;html=1;whiteSpace=wrap;" vertex="1" parent="pkg_korisnici">
+          <mxGeometry x="110" y="55" width="260" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="c_socijalni" value="&lt;&lt;component&gt;&gt;&lt;br&gt;Socijalni karton" style="shape=component;align=left;spacingLeft=36;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;html=1;whiteSpace=wrap;" vertex="1" parent="pkg_korisnici">
+          <mxGeometry x="110" y="185" width="260" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="e_prijava_socijalni" edge="1" parent="pkg_korisnici" source="c_prijava" target="c_socijalni" style="endArrow=block;endFill=1;html=1;strokeColor=#000000;fontColor=#000000;rounded=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- DONACIJE I ZALIHE -->
+        <mxCell id="pkg_donacije" value="DONACIJE I ZALIHE" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="600" y="40" width="480" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="c_zaprimanje" value="&lt;&lt;component&gt;&gt;&lt;br&gt;Zaprimanje donacija" style="shape=component;align=left;spacingLeft=36;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;html=1;whiteSpace=wrap;" vertex="1" parent="pkg_donacije">
+          <mxGeometry x="30" y="55" width="200" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="c_kategorizacija" value="&lt;&lt;component&gt;&gt;&lt;br&gt;Kategorizacija" style="shape=component;align=left;spacingLeft=36;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;html=1;whiteSpace=wrap;" vertex="1" parent="pkg_donacije">
+          <mxGeometry x="250" y="55" width="200" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="c_skladiste" value="&lt;&lt;component&gt;&gt;&lt;br&gt;Skladiste zaliha" style="shape=component;align=left;spacingLeft=36;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;html=1;whiteSpace=wrap;" vertex="1" parent="pkg_donacije">
+          <mxGeometry x="120" y="185" width="240" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="e_zaprimanje_skladiste" edge="1" parent="pkg_donacije" source="c_zaprimanje" target="c_skladiste" style="endArrow=block;endFill=1;html=1;strokeColor=#000000;fontColor=#000000;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_kategorizacija_skladiste" edge="1" parent="pkg_donacije" source="c_kategorizacija" target="c_skladiste" style="endArrow=block;endFill=1;html=1;strokeColor=#000000;fontColor=#000000;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- DISTRIBUCIJA (TEREN) -->
+        <mxCell id="pkg_distribucija" value="DISTRIBUCIJA (TEREN)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="400" width="480" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="c_angazman" value="&lt;&lt;component&gt;&gt;&lt;br&gt;Angazman volontera" style="shape=component;align=left;spacingLeft=36;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;html=1;whiteSpace=wrap;" vertex="1" parent="pkg_distribucija">
+          <mxGeometry x="30" y="55" width="200" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="c_gps" value="&lt;&lt;component&gt;&gt;&lt;br&gt;GPS Rute" style="shape=component;align=left;spacingLeft=36;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;html=1;whiteSpace=wrap;" vertex="1" parent="pkg_distribucija">
+          <mxGeometry x="250" y="55" width="200" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="c_planiranje" value="&lt;&lt;component&gt;&gt;&lt;br&gt;Planiranje dostave" style="shape=component;align=left;spacingLeft=36;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;html=1;whiteSpace=wrap;" vertex="1" parent="pkg_distribucija">
+          <mxGeometry x="120" y="185" width="240" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="e_angazman_planiranje" edge="1" parent="pkg_distribucija" source="c_angazman" target="c_planiranje" style="endArrow=block;endFill=1;html=1;strokeColor=#000000;fontColor=#000000;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_gps_planiranje" edge="1" parent="pkg_distribucija" source="c_gps" target="c_planiranje" style="endArrow=block;endFill=1;html=1;strokeColor=#000000;fontColor=#000000;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ADMINISTRACIJA -->
+        <mxCell id="pkg_admin" value="ADMINISTRACIJA" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="600" y="400" width="480" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="c_gdpr" value="&lt;&lt;component&gt;&gt;&lt;br&gt;GDPR Audit Log" style="shape=component;align=left;spacingLeft=36;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;html=1;whiteSpace=wrap;" vertex="1" parent="pkg_admin">
+          <mxGeometry x="30" y="55" width="200" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="c_izvjestaji" value="&lt;&lt;component&gt;&gt;&lt;br&gt;Izvjestaji" style="shape=component;align=left;spacingLeft=36;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;html=1;whiteSpace=wrap;" vertex="1" parent="pkg_admin">
+          <mxGeometry x="250" y="55" width="200" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="c_admin_panel" value="&lt;&lt;component&gt;&gt;&lt;br&gt;Admin Panel" style="shape=component;align=left;spacingLeft=36;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;html=1;whiteSpace=wrap;" vertex="1" parent="pkg_admin">
+          <mxGeometry x="120" y="185" width="240" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="e_gdpr_admin" edge="1" parent="pkg_admin" source="c_gdpr" target="c_admin_panel" style="endArrow=block;endFill=1;html=1;strokeColor=#000000;fontColor=#000000;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_izvjestaji_admin" edge="1" parent="pkg_admin" source="c_izvjestaji" target="c_admin_panel" style="endArrow=block;endFill=1;html=1;strokeColor=#000000;fontColor=#000000;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Međumodulske veze -->
+        <mxCell id="if_donator" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="548" y="168" width="14" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="e_korisnici_donacije" value="Podaci o donatoru" style="endArrow=none;html=1;strokeColor=#000000;fontColor=#000000;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="pkg_korisnici" target="pkg_donacije">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="if_potrebe" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="273" y="358" width="14" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="e_korisnici_distribucija" value="Dodjela potreba" style="endArrow=none;html=1;strokeColor=#000000;fontColor=#000000;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="pkg_korisnici" target="pkg_distribucija">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e_distribucija_donacije" value="Preuzimanje zaliha" style="endArrow=block;endFill=1;html=1;strokeColor=#000000;fontColor=#000000;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="pkg_distribucija" target="pkg_donacije">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="475" />
+              <mxPoint x="560" y="360" />
+              <mxPoint x="720" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="if_sati" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="548" y="528" width="14" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="e_distribucija_admin" value="Sati i isporuke" style="endArrow=none;html=1;strokeColor=#000000;fontColor=#000000;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="pkg_distribucija" target="pkg_admin">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
